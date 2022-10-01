@@ -20,7 +20,7 @@
         <td>
           {{$todo->updated_at}}
         </td>
-        <form action="/update/{{ $todo->id }}" method="post">
+        <form action="/update" method="post">
           @csrf
           <input type="hidden" name="_token" value="{{$todo->task}}">
           <td>
