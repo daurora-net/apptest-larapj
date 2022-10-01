@@ -22,7 +22,7 @@
         </td>
         <form action="/update" method="post">
           @csrf
-          <input type="hidden" name="_token" value="{{$todo->task}}">
+          <input type="hidden" name="id" value="{{$todo->id}}">
           <td>
             <input type="text" name="task" value="{{$todo->task}}" class="input-update">
           </td>
@@ -33,7 +33,7 @@
         <td>
           <form action="/delete" method="post">
             @csrf
-            <input type="hidden" name="_token" value="{{$todo->task}}">
+            <input type="hidden" name="id" value="{{$todo->id}}">
             <button class="button-delete">削除</button>
           </form>
         </td>
